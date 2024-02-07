@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-8z@jyh*7=hvnfig(lvl)6a#@*lwcfxtfjok!gt%d3pwp=ud1mz
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app', 'binarybreeze.co.uk']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -77,7 +77,7 @@ WSGI_APPLICATION = 'BinaryBreeze.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'mbdb/db.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
@@ -126,9 +126,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = 'static/'
-STATICFILES_DIRS = [
-    BASE_DIR / "static",
-]
+STATIC_ROOT = 'static/'
+# STATICFILES_DIRS = [
+#     BASE_DIR / "static",
+# ]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
